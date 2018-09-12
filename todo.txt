@@ -1,2 +1,3 @@
-- dedupe
 - removes
+- shared function or file for formatting a task?
+- give a task an id?
