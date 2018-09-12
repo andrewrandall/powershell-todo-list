@@ -1,13 +1,12 @@
 param($supressNoTaskWarning=$false)
-$any = $false
 
-if (Test-Path .dat) {
-    foreach ($line in Get-Content .dat) {
-        $any = $true
-        Write-Host $line.Substring(2)
-    }
-}
+$tasks = .\read-tasks.ps1
 
-if (($any -eq $false) -and ($supressNoTaskWarning -eq $false)) {
+if (($tasks.Length -eq 0) -and ($supressNoTaskWarning -eq $false)) {
     Write-Host "No tasks added yet"
+}
+else {
+    foreach ($task in $tasks) {
+        Write-Host $task.Name
+    }
 }

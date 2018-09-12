@@ -1,2 +1,2 @@
-- shared function or file for formatting a task? (script returning an array of task objects)
 - give a task an id?
+- use the task object everywhere
