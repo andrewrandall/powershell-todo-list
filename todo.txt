@@ -1,2 +1,1 @@
 - give a task an id?
-- use the task object everywhere

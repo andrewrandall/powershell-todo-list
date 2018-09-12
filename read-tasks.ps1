@@ -1,10 +1,3 @@
-function New-TaskItem
-{
-    $x = New-Object Object
-    $x | Add-Member -MemberType NoteProperty -Name Name -Value ""
-    return $x
-}
-
 if (Test-Path .dat) {
     $tasks = @()
     foreach ($line in Get-Content .dat) {
@@ -12,7 +5,7 @@ if (Test-Path .dat) {
             if ($x) {
                 $tasks += $x
             }
-            $x = New-TaskItem
+            $x = .\new-taskitem.ps1
             $x.Name = $line.Substring(2)
         }
     }
