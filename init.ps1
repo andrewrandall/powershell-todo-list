@@ -1,8 +1,3 @@
-function Create-File
-{
-	if (-not (Test-Path .dat)) {
-		New-Item .dat | Out-Null
-	}
+if (-not (Test-Path .dat)) {
+	New-Item .dat | Out-Null
 }
-
-Create-File
