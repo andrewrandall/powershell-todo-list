@@ -1,3 +1,3 @@
-- removes
-- shared function or file for formatting a task?
+- shared function or file for formatting a task? (script returning an array of task objects)
 - give a task an id?
+- message when list tasks works but there are none
