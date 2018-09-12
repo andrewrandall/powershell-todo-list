@@ -14,4 +14,4 @@ foreach ($line in Get-Content .datbak) {
 
 Remove-Item .datbak
 
-.\list-tasks.ps1
+.\list-tasks.ps1 -supressNoTaskWarning $true
