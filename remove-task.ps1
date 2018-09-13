@@ -1,4 +1,4 @@
-param($name)
+param($x)
 
 if (-not(Test-Path .dat)) {
     return
@@ -9,7 +9,10 @@ $newTasks = @()
 $found = $false
 
 foreach ($task in $tasks) {
-    if ($task.Name -eq $name) {
+    if ($task.Name -eq $x) {
+        $found = $true
+    }
+    elseif ($task.Id -eq $x) {
         $found = $true
     }
     else {

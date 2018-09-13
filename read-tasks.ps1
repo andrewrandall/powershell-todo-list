@@ -1,5 +1,6 @@
 if (Test-Path .dat) {
     $tasks = @()
+    $x = $null
     foreach ($line in Get-Content .dat) {
         if ($line[0] -eq "-") {
             if ($x) {

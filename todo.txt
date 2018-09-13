@@ -1,3 +1,4 @@
 - soft delete
 - completed yes/no
 - added date
+- don't require quotes in add-task input
