@@ -1,1 +1,3 @@
-- give a task an id?
+- soft delete
+- completed yes/no
+- added date

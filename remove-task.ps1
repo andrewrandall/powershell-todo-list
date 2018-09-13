@@ -20,7 +20,7 @@ foreach ($task in $tasks) {
 if ($found) {
     .\reset.ps1
     foreach ($task in $newTasks) {
-        .\add-task.ps1 $task.Name
+        $task.Save()
     }
 }
 else {

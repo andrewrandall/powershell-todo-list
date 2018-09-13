@@ -1,5 +1,7 @@
 param($name)
 
+$ErrorActionPreference = "Stop"
+
 if (-not (Test-Path .dat)) {
     .\init.ps1
 }
@@ -14,4 +16,5 @@ foreach ($task in $tasks) {
 
 $taskItem = .\new-taskitem.ps1
 $taskItem.Name = $name
-Add-Content .dat "- $($taskItem.Name)"
+$taskItem.Id = ($tasks | Measure-Object -Property Id -Maximum | Select-Object -ExpandProperty Maximum) + 1
+$taskItem.Save()

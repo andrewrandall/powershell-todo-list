@@ -7,6 +7,6 @@ if (($tasks.Length -eq 0) -and ($supressNoTaskWarning -eq $false)) {
 }
 else {
     foreach ($task in $tasks) {
-        Write-Host $task.Name
+        Write-Host "$($task.Id)) $($task.Name)" 
     }
 }
